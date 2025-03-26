@@ -25,7 +25,7 @@ export default function Home() {
           <div className="max-w-2xl">
             <Badge className="mb-4 bg-white/20 text-white hover:bg-white/30">AIIMS Wellness</Badge>
             <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
-              World-Class Healthcare in India
+              World-Class Healthcare in India Test
             </h1>
             <p className="mt-6 text-xl text-white/90">
               Access affordable, high-quality medical treatments from India's top hospitals and specialists. Your
