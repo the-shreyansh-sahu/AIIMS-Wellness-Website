@@ -14,7 +14,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative h-screen flex items-end">
         <Image
-          src="/placeholder.svg?height=1080&width=1920"
+          src="/pic-assets/Hero.png?height=1080&width=1920"
           alt="Medical Tourism in India"
           width={1920}
           height={1080}
