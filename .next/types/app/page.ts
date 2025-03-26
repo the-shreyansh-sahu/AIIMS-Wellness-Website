@@ -1,4 +1,4 @@
-// File: D:\VS_Projects\AIIMS Wellness\app\page.tsx
+// File: D:\VS_Projects\AIIMS Wellness Website\AIIMS-Wellness-Website\app\page.tsx
 import * as entry from '../../../app/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
