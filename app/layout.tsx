@@ -12,7 +12,10 @@ export const metadata: Metadata = {
   title: "AIIMS Wellness - Medical Tourism in India",
   description:
     "Connect with India's top hospitals for affordable, high-quality medical treatments. Your journey to better health starts here.",
-    generator: 'Shreyansh Sahu'
+    generator: 'Shreyansh Sahu',
+  icons: {
+    icon: "/heart-pulse.svg",
+  }
 }
 
 export default function RootLayout({
