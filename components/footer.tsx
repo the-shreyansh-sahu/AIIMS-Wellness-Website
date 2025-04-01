@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer className="bg-green-50">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> {/* Changed to 3 columns */}
           <div>
             <Link href="/" className="flex items-center gap-2 font-bold text-xl mb-4">
               <HeartPulse className="h-6 w-6 text-green-600" />
@@ -89,70 +89,16 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div>
-            <h3 className="font-semibold text-lg mb-4 text-medical-800">Popular Treatments</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link
-                  href="/treatments/cardiology"
-                  className="text-muted-foreground hover:text-medical-700 transition-colors"
-                >
-                  Cardiac Surgery
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/treatments/orthopedics"
-                  className="text-muted-foreground hover:text-medical-700 transition-colors"
-                >
-                  Knee Replacement
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/treatments/oncology"
-                  className="text-muted-foreground hover:text-medical-700 transition-colors"
-                >
-                  Cancer Treatment
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/treatments/neurology"
-                  className="text-muted-foreground hover:text-medical-700 transition-colors"
-                >
-                  Neurosurgery
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/treatments/fertility"
-                  className="text-muted-foreground hover:text-medical-700 transition-colors"
-                >
-                  IVF Treatment
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/treatments/cosmetic"
-                  className="text-muted-foreground hover:text-medical-700 transition-colors"
-                >
-                  Cosmetic Surgery
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <div>
+          <div> {/* Contact Us section remains in the third column */}
             <h3 className="font-semibold text-lg mb-4 text-medical-800">Contact Us</h3>
             <div className="space-y-4">
               <div className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-green-600 shrink-0 mt-0.5" />
-                <p className="text-muted-foreground">123 Healthcare Avenue, New Delhi, 110001, India</p>
+                <p className="text-muted-foreground">342p Basement, Sector 38, Gurugram, India</p>
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="h-5 w-5 text-green-600 shrink-0" />
-                <p className="text-muted-foreground">+91 1234567890</p>
+                <p className="text-muted-foreground">+91 8527896172</p>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="h-5 w-5 text-green-600 shrink-0" />
@@ -198,4 +144,3 @@ export default function Footer() {
     </footer>
   )
 }
-

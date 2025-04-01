@@ -5,11 +5,9 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import {
   NavigationMenu,
-  NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
@@ -69,148 +67,22 @@ export default function Navbar() {
         <NavigationMenu className="hidden lg:flex">
           <NavigationMenuList>
             <NavigationMenuItem>
-              <NavigationMenuTrigger>Hospitals</NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                  <li className="row-span-3">
-                    <NavigationMenuLink asChild>
-                      <a
-                        className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-medical-100 to-medical-200 p-6 no-underline outline-none focus:shadow-md"
-                        href="/hospitals"
-                      >
-                        <div className="mb-2 mt-4 text-lg font-medium text-medical-900">Top Hospitals</div>
-                        <p className="text-sm leading-tight text-medical-800">
-                          Explore India's leading JCI-accredited hospitals offering world-class medical care.
-                        </p>
-                      </a>
-                    </NavigationMenuLink>
-                  </li>
-                  <li>
-                    <NavigationMenuLink asChild>
-                      <a
-                        href="/hospitals/delhi"
-                        className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-medical-50 hover:text-medical-900 focus:bg-medical-50 focus:text-medical-900"
-                      >
-                        <div className="text-sm font-medium leading-none">Delhi NCR</div>
-                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                          Top hospitals in Delhi and National Capital Region
-                        </p>
-                      </a>
-                    </NavigationMenuLink>
-                  </li>
-                  <li>
-                    <NavigationMenuLink asChild>
-                      <a
-                        href="/hospitals/mumbai"
-                        className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-medical-50 hover:text-medical-900 focus:bg-medical-50 focus:text-medical-900"
-                      >
-                        <div className="text-sm font-medium leading-none">Mumbai</div>
-                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                          Leading medical institutions in Mumbai
-                        </p>
-                      </a>
-                    </NavigationMenuLink>
-                  </li>
-                  <li>
-                    <NavigationMenuLink asChild>
-                      <a
-                        href="/hospitals/chennai"
-                        className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-medical-50 hover:text-medical-900 focus:bg-medical-50 focus:text-medical-900"
-                      >
-                        <div className="text-sm font-medium leading-none">Chennai</div>
-                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                          Renowned hospitals in Chennai
-                        </p>
-                      </a>
-                    </NavigationMenuLink>
-                  </li>
-                </ul>
-              </NavigationMenuContent>
+              <Link href="/hospitals" legacyBehavior passHref>
+                <NavigationMenuLink
+                  className={cn(navigationMenuTriggerStyle(), "hover:bg-green-50 hover:text-green-700")}
+                >
+                  Hospitals
+                </NavigationMenuLink>
+              </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuTrigger>Treatments</NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                  <li>
-                    <NavigationMenuLink asChild>
-                      <a
-                        href="/treatments/cardiology"
-                        className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                      >
-                        <div className="text-sm font-medium leading-none">Cardiology</div>
-                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                          Heart surgeries and treatments
-                        </p>
-                      </a>
-                    </NavigationMenuLink>
-                  </li>
-                  <li>
-                    <NavigationMenuLink asChild>
-                      <a
-                        href="/treatments/orthopedics"
-                        className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                      >
-                        <div className="text-sm font-medium leading-none">Orthopedics</div>
-                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                          Joint replacements and spine surgeries
-                        </p>
-                      </a>
-                    </NavigationMenuLink>
-                  </li>
-                  <li>
-                    <NavigationMenuLink asChild>
-                      <a
-                        href="/treatments/oncology"
-                        className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                      >
-                        <div className="text-sm font-medium leading-none">Oncology</div>
-                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                          Cancer treatments and surgeries
-                        </p>
-                      </a>
-                    </NavigationMenuLink>
-                  </li>
-                  <li>
-                    <NavigationMenuLink asChild>
-                      <a
-                        href="/treatments/neurology"
-                        className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                      >
-                        <div className="text-sm font-medium leading-none">Neurology</div>
-                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                          Brain and nervous system treatments
-                        </p>
-                      </a>
-                    </NavigationMenuLink>
-                  </li>
-                  <li>
-                    <NavigationMenuLink asChild>
-                      <a
-                        href="/treatments/fertility"
-                        className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                      >
-                        <div className="text-sm font-medium leading-none">Fertility</div>
-                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                          IVF and fertility treatments
-                        </p>
-                      </a>
-                    </NavigationMenuLink>
-                  </li>
-                  <li>
-                    <NavigationMenuLink asChild>
-                      <a
-                        href="/treatments"
-                        className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                      >
-                        <div className="text-sm font-medium leading-none">View All Treatments</div>
-                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                          Explore our complete range of medical treatments
-                        </p>
-                      </a>
-                    </NavigationMenuLink>
-                  </li>
-                </ul>
-              </NavigationMenuContent>
+              <Link href="/treatments" legacyBehavior passHref>
+                <NavigationMenuLink
+                  className={cn(navigationMenuTriggerStyle(), "hover:bg-green-50 hover:text-green-700")}
+                >
+                  Treatments
+                </NavigationMenuLink>
+              </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <Link href="/packages" legacyBehavior passHref>
@@ -245,7 +117,7 @@ export default function Navbar() {
         <div className="flex items-center gap-2">
           <Link href="/contact" className="hidden md:flex items-center gap-2 text-sm font-medium">
             <Phone className="h-4 w-4 text-green-600" />
-            <span>+91 1234567890</span>
+            <span>+91 8527896172</span>
           </Link>
           <div className="hidden sm:flex gap-2">
             <Button asChild variant="ghost" size="icon">
@@ -269,4 +141,3 @@ export default function Navbar() {
     </header>
   )
 }
-

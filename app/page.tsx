@@ -22,18 +22,19 @@ export default function Home() {
           priority
         />
         <div className="container absolute inset-x-0 bottom-0 z-20 mx-auto px-4 py-24 sm:py-32">
-          <div className="max-w-2xl">
-            <Badge className="mb-4 bg-white/20 text-white hover:bg-white/30">AIIMS Wellness</Badge>
-            <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
+          {/* Frosted Glass Effect */}
+          <div className="max-w-2xl p-6 rounded-lg backdrop-blur-md bg-white/20"> {/* Adjusted padding here */}
+            <Badge className="mb-3 bg-white/20 text-white hover:bg-white/30 text-sm">AIIMS Wellness</Badge> {/* Adjusted margin and text size here */}
+            <h1 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl"> {/* Adjusted text size here */}
               World-Class Healthcare in India
             </h1>
-            <p className="mt-6 text-xl text-white/90">
+            <p className="mt-4 text-lg text-white/90"> {/* Adjusted margin here */}
               Access affordable, high-quality medical treatments from India's top hospitals and specialists. Your
               journey to better health starts here.
             </p>
-            <div className="mt-10 flex flex-col sm:flex-row gap-4">
+            <div className="mt-8 flex flex-col sm:flex-row gap-4"> {/* Adjusted margin here */}
               <Button size="lg" className="bg-white text-primary hover:bg-white/90">
-              <Link href="/treatments">Explore Treatments</Link>
+                <Link href="/treatments">Explore Treatments</Link>
               </Button>
               <Button size="lg" variant="outline" className="bg-white text-primary hover:bg-white/90">
                 How It Works
@@ -139,7 +140,7 @@ export default function Home() {
       <FeaturedHospitals />
 
       {/* Testimonials */}
-      <section className="py-16 bg-muted/30">
+      {/*<section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Patient Success Stories</h2>
@@ -179,7 +180,7 @@ export default function Home() {
             </Button>
           </div>
         </div>
-      </section>
+      </section>*/}
 
       {/* How It Works */}
       <section className="py-16 bg-white">
@@ -259,5 +260,3 @@ export default function Home() {
     </div>
   )
 }
-
-
